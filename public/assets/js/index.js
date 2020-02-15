@@ -56,10 +56,13 @@ var handleNoteSave = function() {
     text: $noteText.val()
   };
 
+  console.log(newNote);
+
   saveNote(newNote).then(function(data) {
     getAndRenderNotes();
     renderActiveNote();
   });
+  
 };
 
 // Delete the clicked note
